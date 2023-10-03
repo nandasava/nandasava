@@ -2,5 +2,5 @@
 - 👀 I’m interested in Pentesting
 - 🌱 I’m currently learning ...
 - 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me try whatsApp 
+- 📫 How to reach me ,try whatsApp 
 https://wa.me/qr/TO7EBON62XNQP1
