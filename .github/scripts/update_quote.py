@@ -1,9 +1,46 @@
+#!/usr/bin/env python3
+"""
+Daily quote injector for README.md.
+
+Design notes (read before touching):
+- This script must NEVER raise an uncaught exception. A bad run should degrade
+  gracefully (skip the update, log why, exit 0) rather than fail the whole
+  Action, because a red workflow run for a cosmetic README quote is not worth
+  blocking future scheduled runs or alarming anyone.
+- All file writes are atomic (write to a temp file, then os.replace) so a
+  crash mid-write can never leave README.md truncated or corrupted.
+"""
+
 import random
 import datetime
 import re
 import os
+import sys
+import logging
+import tempfile
 
-# 1. Your personal quote library (add 50+ quotes for variety)
+# --- Structured logging so failures are diagnosable from the Actions log tab ---
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    stream=sys.stdout,
+)
+log = logging.getLogger("daily_quote")
+
+# Feature toggle: lets you disable the quote-rotation logic in an emergency
+# without commenting out code. Set DISABLE_QUOTE_UPDATE=true as a repo/workflow
+# env var to make this a safe no-op.
+DISABLE_QUOTE_UPDATE = os.environ.get("DISABLE_QUOTE_UPDATE", "false").lower() == "true"
+
+README_PATH = "README.md"
+MARKER_START = "<!-- DAILY_QUOTE_START -->"
+MARKER_END = "<!-- DAILY_QUOTE_END -->"
+BLOCK_PATTERN = re.compile(
+    rf"({re.escape(MARKER_START)}).*?({re.escape(MARKER_END)})", re.DOTALL
+)
+
+# Curated quote library — kept deliberately small and high-signal rather than
+# padded with filler duplicates.
 QUOTES = [
     "The only way to go fast is to go well. – Robert C. Martin",
     "Simplicity is the soul of efficiency. – Austin Freeman",
@@ -21,43 +58,98 @@ QUOTES = [
     "If you optimize everything, you will always be unhappy. – Donald Knuth",
     "The best error message is the one that never shows up. – Thomas Fuchs",
     "Measuring programming progress by lines of code is like measuring aircraft building progress by weight. – Bill Gates",
-    "Ruby is rubbish! PHP is phpantastic! – Nikita Popov (sarcasm)"
 ]
 
-# 2. Pick a random quote and timestamp
-selected = random.choice(QUOTES)
-now = datetime.datetime.now().strftime("%B %d, %Y at %H:%M UTC")
 
-# 3. Define the block we will inject into README.md
-new_block = f"""<!-- DAILY_QUOTE_START -->
-**Daily Coding Quote:** *{selected}*
+def read_file_safely(path: str) -> str | None:
+    """Read a file, returning None (not raising) if it doesn't exist or can't be read."""
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return f.read()
+    except FileNotFoundError:
+        log.info("%s not found — will create it.", path)
+        return None
+    except OSError as e:
+        # Fragile point: permissions issues, disk problems, etc. Never crash — log and bail.
+        log.error("Could not read %s: %s", path, e)
+        return None
 
-*Updated: {now}*
-<!-- DAILY_QUOTE_END -->"""
 
-readme_path = "README.md"
+def write_file_atomically(path: str, content: str) -> bool:
+    """
+    Write content to `path` atomically: write to a temp file in the same
+    directory, flush + fsync, then os.replace() over the target. This means
+    a crash mid-write can never leave a half-written README.md.
+    Returns True on success, False on any failure (never raises).
+    """
+    directory = os.path.dirname(os.path.abspath(path)) or "."
+    try:
+        fd, tmp_path = tempfile.mkstemp(dir=directory, prefix=".tmp_readme_")
+        try:
+            with os.fdopen(fd, "w", encoding="utf-8") as tmp_file:
+                tmp_file.write(content)
+                tmp_file.flush()
+                os.fsync(tmp_file.fileno())
+            os.replace(tmp_path, path)  # atomic on POSIX
+            return True
+        except Exception:
+            # Clean up the temp file if the replace step never happened.
+            if os.path.exists(tmp_path):
+                os.remove(tmp_path)
+            raise
+    except OSError as e:
+        log.error("Atomic write to %s failed: %s", path, e)
+        return False
 
-# 4. If README doesn't exist, create a basic one
-if not os.path.exists(readme_path):
-    with open(readme_path, "w") as f:
-        f.write("# Hi there 👋\n\n" + new_block)
-    print("README created with new quote.")
-    exit(0)
 
-# 5. Read existing README
-with open(readme_path, "r") as f:
-    content = f.read()
+def pick_quote(previous_content: str | None) -> str:
+    """Pick a random quote, avoiding an immediate repeat of yesterday's quote if possible."""
+    if previous_content:
+        match = BLOCK_PATTERN.search(previous_content)
+        if match:
+            previous_block = match.group(0)
+            candidates = [q for q in QUOTES if q not in previous_block]
+            if candidates:  # only filter if it doesn't empty the pool
+                return random.choice(candidates)
+    return random.choice(QUOTES)
 
-# 6. Replace the old block between the markers (or append if markers missing)
-pattern = r"(<!-- DAILY_QUOTE_START -->).*?(<!-- DAILY_QUOTE_END -->)"
-if re.search(pattern, content, re.DOTALL):
-    updated_content = re.sub(pattern, new_block, content, flags=re.DOTALL)
-else:
-    # If markers don't exist, append the block to the end
-    updated_content = content + "\n\n" + new_block
 
-# 7. Write it back
-with open(readme_path, "w") as f:
-    f.write(updated_content)
+def main() -> int:
+    if DISABLE_QUOTE_UPDATE:
+        log.warning("DISABLE_QUOTE_UPDATE is set — skipping update (feature toggle active).")
+        return 0
 
-print(f"✅ README updated with: {selected}")
+    if not QUOTES:
+        # Defensive: should never happen, but a safe default beats a crash.
+        log.error("Quote library is empty — nothing to write. Exiting cleanly.")
+        return 0
+
+    existing_content = read_file_safely(README_PATH)
+    selected = pick_quote(existing_content)
+    now = datetime.datetime.now(datetime.timezone.utc).strftime("%B %d, %Y at %H:%M UTC")
+
+    new_block = f"{MARKER_START}\n**Daily Coding Quote:** *{selected}*\n\n*Updated: {now}*\n{MARKER_END}"
+
+    if existing_content is None:
+        final_content = "# Hi there 👋\n\n" + new_block + "\n"
+        action = "created"
+    elif BLOCK_PATTERN.search(existing_content):
+        final_content = BLOCK_PATTERN.sub(new_block, existing_content, count=1)
+        action = "updated"
+    else:
+        final_content = existing_content.rstrip() + "\n\n" + new_block + "\n"
+        action = "appended"
+
+    if write_file_atomically(README_PATH, final_content):
+        log.info("README %s successfully with quote: %s", action, selected)
+        return 0
+    else:
+        # Graceful degradation: log clearly, but exit 0 so the workflow doesn't
+        # red-X over a cosmetic feature. Change to `return 1` if you'd rather
+        # the Action visibly fail on write errors.
+        log.error("Failed to write README — leaving existing file untouched.")
+        return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
