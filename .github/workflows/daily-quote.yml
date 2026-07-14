@@ -10,7 +10,7 @@ on:
 jobs:
   update-quote:
     runs-on: ubuntu-latest
-    
+
     # Critical: Give the action permission to push code back to the repo
     permissions:
       contents: write
