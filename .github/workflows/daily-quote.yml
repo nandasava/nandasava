@@ -1,0 +1,41 @@
+name: Daily Coding Quote
+
+on:
+  schedule:
+    # Runs at 00:00 UTC every day
+    - cron: '0 0 * * *'
+  # Allows you to manually trigger the action from the GitHub 'Actions' tab
+  workflow_dispatch:
+
+jobs:
+  update-quote:
+    runs-on: ubuntu-latest
+    
+    # Critical: Give the action permission to push code back to the repo
+    permissions:
+      contents: write
+
+    steps:
+      # 1. Check out the repository code
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      # 2. Set up Python
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      # 3. Run the script
+      - name: Generate new quote
+        run: python .github/scripts/update_quote.py
+
+      # 4. Commit and push the changes (only if README actually changed)
+      - name: Commit and push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action (Daily Quote)"
+          git add README.md
+          # Check if there are changes to commit; if not, skip
+          git diff --staged --quiet || git commit -m "📝 Daily quote update [skip ci]"
+          git push
