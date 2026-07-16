@@ -1,0 +1,7 @@
+🧠 Rust for systems programming
+🔐 Web3 security & smart contract auditing
+☁️ Distributed systems design
+🕵️ Offensive security & CTF challenges
+⚙️ Kubernetes & container orchestration
+📡 Zero-knowledge proofs
+🧩 Compiler design basics
