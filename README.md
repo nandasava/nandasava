@@ -87,15 +87,15 @@ I believe in **automation and consistency**. This profile updates **every hour**
 
 
 <!-- DAILY_QUOTE_START -->
-**Daily Coding Quote:** *The only true wisdom is in knowing you know everything. – Oprah Winfrey*
+**Daily Coding Quote:** *Life is really simple, but we insist on making it hard. – Noam Chomsky*
 
-*Updated: July 26, 2026 at 02:22 UTC*
+*Updated: July 27, 2026 at 02:29 UTC*
 <!-- DAILY_QUOTE_END -->
 
 <!-- LEARNING_START -->
-**📚 Currently Learning:** ☁️ Distributed systems design
+**📚 Currently Learning:** 🕵️ Offensive security & CTF challenges
 <!-- LEARNING_END -->
 
 <!-- PROJECT_START -->
-**⭐ Project Highlight:** 🚀 [Project One](https://github.com/nandasava/project-one) — short one-line description
+**⭐ Project Highlight:** 🚀 [Project Two](https://github.com/nandasava/project-two) — short one-line description
 <!-- PROJECT_END -->
