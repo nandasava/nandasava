@@ -87,15 +87,15 @@ I believe in **automation and consistency**. This profile updates **every hour**
 
 
 <!-- DAILY_QUOTE_START -->
-**Daily Coding Quote:** *The only impossible journey is the one you never {begin}. – Hannah Arendt*
+**Daily Coding Quote:** *The only impossible journey is the one you never {begin}. – Linus Torvalds*
 
-*Updated: August 02, 2026 at 02:20 UTC*
+*Updated: August 03, 2026 at 02:22 UTC*
 <!-- DAILY_QUOTE_END -->
 
 <!-- LEARNING_START -->
-**📚 Currently Learning:** 🕵️ Offensive security & CTF challenges
+**📚 Currently Learning:** ⚙️ Kubernetes & container orchestration
 <!-- LEARNING_END -->
 
 <!-- PROJECT_START -->
-**⭐ Project Highlight:** 🚀 [Project Two](https://github.com/nandasava/project-two) — short one-line description
+**⭐ Project Highlight:** 🚀 [Project Three](https://github.com/nandasava/project-three) — short one-line description
 <!-- PROJECT_END -->
