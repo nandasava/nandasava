@@ -87,15 +87,15 @@ I believe in **automation and consistency**. This profile updates **every hour**
 
 
 <!-- DAILY_QUOTE_START -->
-**Daily Coding Quote:** *The journey of a thousand miles begins with one step. – George Bernard Shaw*
+**Daily Coding Quote:** *Strive not to be a success, but rather to be of meaning. – Martin Luther King Jr.*
 
-*Updated: August 16, 2026 at 01:00 UTC*
+*Updated: August 17, 2026 at 00:58 UTC*
 <!-- DAILY_QUOTE_END -->
 
 <!-- LEARNING_START -->
-**📚 Currently Learning:** 📡 Zero-knowledge proofs
+**📚 Currently Learning:** 🧩 Compiler design basics
 <!-- LEARNING_END -->
 
 <!-- PROJECT_START -->
-**⭐ Project Highlight:** 🚀 [Project One](https://github.com/nandasava/project-one) — short one-line description
+**⭐ Project Highlight:** 🚀 [Project Two](https://github.com/nandasava/project-two) — short one-line description
 <!-- PROJECT_END -->
