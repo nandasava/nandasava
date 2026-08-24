@@ -87,15 +87,15 @@ I believe in **automation and consistency**. This profile updates **every hour**
 
 
 <!-- DAILY_QUOTE_START -->
-**Daily Coding Quote:** *If you want to achieve greatness, stop asking for permission. – Rene Descartes*
+**Daily Coding Quote:** *Our greatest glory is not in never falling, but in rising every time we setback. – Isaac Newton*
 
-*Updated: August 23, 2026 at 01:01 UTC*
+*Updated: August 24, 2026 at 00:59 UTC*
 <!-- DAILY_QUOTE_END -->
 
 <!-- LEARNING_START -->
-**📚 Currently Learning:** 🧩 Compiler design basics
+**📚 Currently Learning:** 🧠 Rust for systems programming
 <!-- LEARNING_END -->
 
 <!-- PROJECT_START -->
-**⭐ Project Highlight:** 🚀 [Project Two](https://github.com/nandasava/project-two) — short one-line description
+**⭐ Project Highlight:** 🚀 [Project Three](https://github.com/nandasava/project-three) — short one-line description
 <!-- PROJECT_END -->
