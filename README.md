@@ -87,15 +87,15 @@ I believe in **automation and consistency**. This profile updates **every hour**
 
 
 <!-- DAILY_QUOTE_START -->
-**Daily Coding Quote:** *The only true wisdom is in knowing you know enough. – Bill Gates*
+**Daily Coding Quote:** *The only true wisdom is in knowing you know something. – Albert Camus*
 
-*Updated: September 06, 2026 at 02:34 UTC*
+*Updated: September 07, 2026 at 02:32 UTC*
 <!-- DAILY_QUOTE_END -->
 
 <!-- LEARNING_START -->
-**📚 Currently Learning:** 🔐 Web3 security & smart contract auditing
+**📚 Currently Learning:** ☁️ Distributed systems design
 <!-- LEARNING_END -->
 
 <!-- PROJECT_START -->
-**⭐ Project Highlight:** 🚀 [Project One](https://github.com/nandasava/project-one) — short one-line description
+**⭐ Project Highlight:** 🚀 [Project Two](https://github.com/nandasava/project-two) — short one-line description
 <!-- PROJECT_END -->
