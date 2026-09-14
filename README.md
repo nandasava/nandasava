@@ -87,15 +87,15 @@ I believe in **automation and consistency**. This profile updates **every hour**
 
 
 <!-- DAILY_QUOTE_START -->
-**Daily Coding Quote:** *The only true wisdom is in knowing you know nothing. – Friedrich Nietzsche*
+**Daily Coding Quote:** *It does not matter how slowly you go as long as you do not surrender. – Hannah Arendt*
 
-*Updated: September 13, 2026 at 02:47 UTC*
+*Updated: September 14, 2026 at 03:02 UTC*
 <!-- DAILY_QUOTE_END -->
 
 <!-- LEARNING_START -->
-**📚 Currently Learning:** ☁️ Distributed systems design
+**📚 Currently Learning:** 🕵️ Offensive security & CTF challenges
 <!-- LEARNING_END -->
 
 <!-- PROJECT_START -->
-**⭐ Project Highlight:** 🚀 [Project Two](https://github.com/nandasava/project-two) — short one-line description
+**⭐ Project Highlight:** 🚀 [Project Three](https://github.com/nandasava/project-three) — short one-line description
 <!-- PROJECT_END -->
