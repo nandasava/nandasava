@@ -87,15 +87,15 @@ I believe in **automation and consistency**. This profile updates **every hour**
 
 
 <!-- DAILY_QUOTE_START -->
-**Daily Coding Quote:** *If you want to achieve greatness, stop asking for validation. – Socrates*
+**Daily Coding Quote:** *Imagination is more important than speed. – Thomas Edison*
 
-*Updated: September 20, 2026 at 03:02 UTC*
+*Updated: September 21, 2026 at 02:59 UTC*
 <!-- DAILY_QUOTE_END -->
 
 <!-- LEARNING_START -->
-**📚 Currently Learning:** 🕵️ Offensive security & CTF challenges
+**📚 Currently Learning:** ⚙️ Kubernetes & container orchestration
 <!-- LEARNING_END -->
 
 <!-- PROJECT_START -->
-**⭐ Project Highlight:** 🚀 [Project Three](https://github.com/nandasava/project-three) — short one-line description
+**⭐ Project Highlight:** 🚀 [Project One](https://github.com/nandasava/project-one) — short one-line description
 <!-- PROJECT_END -->
