@@ -87,15 +87,15 @@ I believe in **automation and consistency**. This profile updates **every hour**
 
 
 <!-- DAILY_QUOTE_START -->
-**Daily Coding Quote:** *To grow is to progress. – James Gosling*
+**Daily Coding Quote:** *If you want to achieve greatness, stop asking for acceptance. – Voltaire*
 
-*Updated: September 27, 2026 at 03:17 UTC*
+*Updated: September 28, 2026 at 03:14 UTC*
 <!-- DAILY_QUOTE_END -->
 
 <!-- LEARNING_START -->
-**📚 Currently Learning:** ⚙️ Kubernetes & container orchestration
+**📚 Currently Learning:** 📡 Zero-knowledge proofs
 <!-- LEARNING_END -->
 
 <!-- PROJECT_START -->
-**⭐ Project Highlight:** 🚀 [Project One](https://github.com/nandasava/project-one) — short one-line description
+**⭐ Project Highlight:** 🚀 [Project Two](https://github.com/nandasava/project-two) — short one-line description
 <!-- PROJECT_END -->
