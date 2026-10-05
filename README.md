@@ -87,15 +87,15 @@ I believe in **automation and consistency**. This profile updates **every hour**
 
 
 <!-- DAILY_QUOTE_START -->
-**Daily Coding Quote:** *If you want to achieve greatness, stop asking for permission. – Rumi*
+**Daily Coding Quote:** *What you get by achieving your goals is not as important as what you become by achieving them. – Marie Curie*
 
-*Updated: October 04, 2026 at 03:58 UTC*
+*Updated: October 05, 2026 at 03:42 UTC*
 <!-- DAILY_QUOTE_END -->
 
 <!-- LEARNING_START -->
-**📚 Currently Learning:** 📡 Zero-knowledge proofs
+**📚 Currently Learning:** 🧩 Compiler design basics
 <!-- LEARNING_END -->
 
 <!-- PROJECT_START -->
-**⭐ Project Highlight:** 🚀 [Project Two](https://github.com/nandasava/project-two) — short one-line description
+**⭐ Project Highlight:** 🚀 [Project Three](https://github.com/nandasava/project-three) — short one-line description
 <!-- PROJECT_END -->
