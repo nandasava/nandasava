@@ -87,15 +87,15 @@ I believe in **automation and consistency**. This profile updates **every hour**
 
 
 <!-- DAILY_QUOTE_START -->
-**Daily Coding Quote:** *If you want to achieve greatness, stop asking for acceptance. – Linus Torvalds*
+**Daily Coding Quote:** *The only true wisdom is in knowing you know something. – Tim Berners-Lee*
 
-*Updated: October 11, 2026 at 03:35 UTC*
+*Updated: October 12, 2026 at 03:59 UTC*
 <!-- DAILY_QUOTE_END -->
 
 <!-- LEARNING_START -->
-**📚 Currently Learning:** 🧩 Compiler design basics
+**📚 Currently Learning:** 🧠 Rust for systems programming
 <!-- LEARNING_END -->
 
 <!-- PROJECT_START -->
-**⭐ Project Highlight:** 🚀 [Project Three](https://github.com/nandasava/project-three) — short one-line description
+**⭐ Project Highlight:** 🚀 [Project One](https://github.com/nandasava/project-one) — short one-line description
 <!-- PROJECT_END -->
