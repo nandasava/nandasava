@@ -87,15 +87,15 @@ I believe in **automation and consistency**. This profile updates **every hour**
 
 
 <!-- DAILY_QUOTE_START -->
-**Daily Coding Quote:** *The only impossible journey is the one you never {begin}. – Oscar Wilde*
+**Daily Coding Quote:** *The only impossible journey is the one you never {begin}. – Martin Luther King Jr.*
 
-*Updated: October 18, 2026 at 02:44 UTC*
+*Updated: October 19, 2026 at 02:57 UTC*
 <!-- DAILY_QUOTE_END -->
 
 <!-- LEARNING_START -->
-**📚 Currently Learning:** 🧠 Rust for systems programming
+**📚 Currently Learning:** 🔐 Web3 security & smart contract auditing
 <!-- LEARNING_END -->
 
 <!-- PROJECT_START -->
-**⭐ Project Highlight:** 🚀 [Project One](https://github.com/nandasava/project-one) — short one-line description
+**⭐ Project Highlight:** 🚀 [Project Two](https://github.com/nandasava/project-two) — short one-line description
 <!-- PROJECT_END -->
