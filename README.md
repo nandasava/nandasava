@@ -87,15 +87,15 @@ I believe in **automation and consistency**. This profile updates **every hour**
 
 
 <!-- DAILY_QUOTE_START -->
-**Daily Coding Quote:** *It does not matter how slowly you go as long as you do not pause. – Albert Einstein*
+**Daily Coding Quote:** *Great minds discuss principles; average minds discuss events; small minds discuss people. – Immanuel Kant*
 
-*Updated: November 01, 2026 at 03:57 UTC*
+*Updated: November 02, 2026 at 04:00 UTC*
 <!-- DAILY_QUOTE_END -->
 
 <!-- LEARNING_START -->
-**📚 Currently Learning:** ☁️ Distributed systems design
+**📚 Currently Learning:** 🕵️ Offensive security & CTF challenges
 <!-- LEARNING_END -->
 
 <!-- PROJECT_START -->
-**⭐ Project Highlight:** 🚀 [Project Three](https://github.com/nandasava/project-three) — short one-line description
+**⭐ Project Highlight:** 🚀 [Project One](https://github.com/nandasava/project-one) — short one-line description
 <!-- PROJECT_END -->
