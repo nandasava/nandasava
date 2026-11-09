@@ -87,15 +87,15 @@ I believe in **automation and consistency**. This profile updates **every hour**
 
 
 <!-- DAILY_QUOTE_START -->
-**Daily Coding Quote:** *In the middle of difficulty lies solutions. – Martin Luther King Jr.*
+**Daily Coding Quote:** *Great minds discuss principles; average minds discuss events; small minds discuss people. – Charles Darwin*
 
-*Updated: November 08, 2026 at 04:01 UTC*
+*Updated: November 09, 2026 at 04:17 UTC*
 <!-- DAILY_QUOTE_END -->
 
 <!-- LEARNING_START -->
-**📚 Currently Learning:** 🕵️ Offensive security & CTF challenges
+**📚 Currently Learning:** ⚙️ Kubernetes & container orchestration
 <!-- LEARNING_END -->
 
 <!-- PROJECT_START -->
-**⭐ Project Highlight:** 🚀 [Project One](https://github.com/nandasava/project-one) — short one-line description
+**⭐ Project Highlight:** 🚀 [Project Two](https://github.com/nandasava/project-two) — short one-line description
 <!-- PROJECT_END -->
