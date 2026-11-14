@@ -87,9 +87,9 @@ I believe in **automation and consistency**. This profile updates **every hour**
 
 
 <!-- DAILY_QUOTE_START -->
-**Daily Coding Quote:** *A man who dares to waste one hour of time has not discovered the value of mind. – Friedrich Nietzsche*
+**Daily Coding Quote:** *A man who dares to waste one hour of time has not discovered the value of time. – Ken Thompson*
 
-*Updated: November 13, 2026 at 04:45 UTC*
+*Updated: November 14, 2026 at 04:40 UTC*
 <!-- DAILY_QUOTE_END -->
 
 <!-- LEARNING_START -->
