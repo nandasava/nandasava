@@ -87,15 +87,15 @@ I believe in **automation and consistency**. This profile updates **every hour**
 
 
 <!-- DAILY_QUOTE_START -->
-**Daily Coding Quote:** *Life is really simple, but we insist on making it hard. – Pablo Picasso*
+**Daily Coding Quote:** *I have not failed. I've just found 10,000 ways that won't work. – Charles Darwin*
 
-*Updated: November 15, 2026 at 04:30 UTC*
+*Updated: November 16, 2026 at 04:27 UTC*
 <!-- DAILY_QUOTE_END -->
 
 <!-- LEARNING_START -->
-**📚 Currently Learning:** ⚙️ Kubernetes & container orchestration
+**📚 Currently Learning:** 📡 Zero-knowledge proofs
 <!-- LEARNING_END -->
 
 <!-- PROJECT_START -->
-**⭐ Project Highlight:** 🚀 [Project Two](https://github.com/nandasava/project-two) — short one-line description
+**⭐ Project Highlight:** 🚀 [Project Three](https://github.com/nandasava/project-three) — short one-line description
 <!-- PROJECT_END -->
