@@ -87,15 +87,15 @@ I believe in **automation and consistency**. This profile updates **every hour**
 
 
 <!-- DAILY_QUOTE_START -->
-**Daily Coding Quote:** *If you want to achieve greatness, stop asking for conformity. – Immanuel Kant*
+**Daily Coding Quote:** *The only impossible journey is the one you never {begin}. – Galileo Galilei*
 
-*Updated: November 22, 2026 at 04:45 UTC*
+*Updated: November 23, 2026 at 05:24 UTC*
 <!-- DAILY_QUOTE_END -->
 
 <!-- LEARNING_START -->
-**📚 Currently Learning:** 📡 Zero-knowledge proofs
+**📚 Currently Learning:** 🧩 Compiler design basics
 <!-- LEARNING_END -->
 
 <!-- PROJECT_START -->
-**⭐ Project Highlight:** 🚀 [Project Three](https://github.com/nandasava/project-three) — short one-line description
+**⭐ Project Highlight:** 🚀 [Project One](https://github.com/nandasava/project-one) — short one-line description
 <!-- PROJECT_END -->
